@@ -1,0 +1,163 @@
+/* styles */
+/* called by your view template */
+@import url("https://cdn.glitch.com/b6a2fe4b-e1a7-452f-afc3-d2f9ac9417f3%2FBentonSans-Regular.otf?1507134020174");
+* {
+  box-sizing: border-box;
+  --pink: #F1A5FF;
+  --blue: #3933FF;
+  --purple: #944DFF;
+  --red: #F55356;
+  --yellow: #F7D331;
+  --green: #54D182;
+  --teal: #00CDD6;
+  --black: #060628;
+  --darkgray: #828293;
+  --medgray: #45455E;
+  --lightgray: #DFDFE6;
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: BentonSans;
+}
+
+.container {
+  background-color: var(--teal);
+  display:flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  max-width: 1200px;
+  border-radius: 20px;
+  min-width: 900px;
+  margin-bottom: 20px;
+}
+
+.input-combo {
+  margin: 1em 0;
+  width: 400px;
+}
+
+#activity-form {
+  background-color: white;
+  border-radius: 20px;
+}
+
+#activity-form, #messages {
+  padding: 30px;
+  flex-basis: 55%;
+  margin: 2em;
+  height: 830px;
+}
+
+#messages {
+  overflow-y:scroll;
+  background-color: white;
+  border-radius: 20px
+}
+
+#header {
+  display: flex;
+}
+
+#header img {
+/*   unresized image :  118 X 170 */
+  width: 59px;
+  height: 85px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#header > h1 {
+  font-size: 5em;
+  font-family: Menlo, monospace;
+  color: var(--darkgray)
+}
+
+form p {
+  color: #828293;
+  font-size: .875em;
+}
+
+.event-body {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  font-family: Menlo, monospace;
+}
+
+.event-comment.failure{
+  background-color: #F55356;
+}
+
+.event-comment.failure:before {
+  border-color: transparent #F55356 transparent transparent;
+}
+
+.event-comment {
+  margin-bottom: 1em;
+}
+
+.manuscript-logo {
+  width: 30px;
+  align-self: flex-start;
+  margin-right: 20px;
+  margin-top: -15px;
+}
+
+.welcome {
+  background-color: var(--pink);
+  color: black;
+}
+
+.event-comment.welcome:before {
+  border-color: transparent var(--pink) transparent transparent;
+}
+
+.glitch-remix-button {
+  float: right;
+  
+}
+
+.glitch-remix-button img {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.glitch-remix-button img:hover {
+  background-color: var(--lightgray);
+  border-radius: 4px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.error-text {
+  color: red;
+}
+
+.table-header {
+  width: 100%;
+  max-width: 100%;
+  text-align: center
+}
+
+.grant {
+  text-align: center;
+}
+
+.grant .table-val {
+  text-align: left;
+}
+
+table, tr, td {
+  border: 1px solid black;
+  padding: 0.5em;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+}

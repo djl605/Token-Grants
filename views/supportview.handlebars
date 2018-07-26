@@ -1,0 +1,50 @@
+
+    <div class="grant">
+      <div class="table-header">
+        <h3>
+          Fog Creek access authorization to customer site and data
+        </h3>
+      </div>
+      <table>
+        <tbody>
+          <tr><td>Status</td><td class="table-val">{{status}}</td></tr>
+          <tr><td>URL</td><td class="table-val">{{url}}</td></tr>
+          <tr><td>User Name</td><td class="table-val">{{user_name}}</td></tr>
+          <tr><td>Access Type</td><td class="table-val">{{type}}</td></tr>
+          <tr><td>Case Number</td><td class="table-val">{{case_number}}</td></tr>
+          <tr><td>Grant Date</td><td class="table-val">{{grant_time}}</td></tr>
+          <tr><td>Revoke Date</td><td class="table-val">{{revoke_time}}</td></tr>
+          <tr><td>Customer Token</td><td class="table-val">{{token}}</td></tr>
+          <tr><td>Customer JS Token</td><td class="table-val">$.cookie('fbToken', '{{token}}')</td></tr>
+        </tbody>
+      </table>
+      <script type="text/javascript">
+        var url = '{{url}}';
+        var token = '{{token}}';
+        $.ajax({url:url + "/f/api/0/set-cookie?token=" + token + "&jsonp=void", dataType:"jsonp"});
+      </script>
+      <span style="float:left;">
+        <form role="manuscriptlogon" name="form" method="post" action={{url}}>
+          <input type="submit" class="btn btn-default" value="Log On Manuscript" />
+        </form>
+      </span>
+      <span style="float:left;">
+        &nbsp;
+      </span>
+      <span style="float:left;">
+        <form role="kilnlogon" id="kilnlogin" name="form" method="post" action="">
+          <input type="submit" class="btn btn-default" value="Log On Kiln" />
+        </form>
+        <script type="text/javascript">
+          var expires = new Date();
+          expires.setSeconds(expires.getSeconds() + 1 * 24 * 3600);
+          var ot = 'fbToken\t' + token + '\t' + expires.toUTCString() + '\n';
+          var encoded = encodeURIComponent(btoa(ot));
+          console.log(encoded);
+          var kilnUrl = url.toLowerCase().replace('fogbugz', 'kilnhg').replace('manuscript', 'kilnhg');
+          $('#kilnlogin').attr('action', kilnUrl + '/?fbc=' + encoded);
+        </script>
+      </span>
+
+
+    </div>

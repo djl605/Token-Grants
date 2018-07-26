@@ -1,0 +1,23 @@
+Hi!
+
+Because your account on our servers can contain highly sensitive information, we keep the information tightly controlled.  Only a very limited number of people have access to view or change your data and we will only do so on a case-by-case basis, and only with your explicit permission.
+
+Access has been granted to Fog Creek for inspecting your data and to make the necessary changes for the purpose of troubleshooting the case referenced below.
+
+Access has been granted for
+
+	Manuscript Site		%(url)s
+	Access Account		%(email)s
+	Access Type		%(type)s
+	Case Number		%(case)d
+	Grant Date		%(grant_date)s
+	Revoke Date		None
+
+Once this case has been resolved you may revoke access by clicking on the link below.
+
+Revoke Access: https://fogcreek-support-access.glitch.me/revoke/%(uid)s
+
+
+All the best,
+
+Fog Creek Customer Support
