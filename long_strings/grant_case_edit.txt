@@ -1,0 +1,18 @@
+Access has been granted
+
+	Manuscript Site		%(url)s
+	Access Account		%(email)s
+	Access Type		%(type)s
+	Case Number		%(case)d
+	Grant Date		%(grant_date)s
+	Revoke Date		None
+
+Go to the Manuscript Site above and in the Javascript Console enter the access code from this link
+
+Access Token [OPEN IN INCOGNITO]:
+https://fogcreek-support-access.glitch.me/access/%(uid)s
+
+Then refresh the page and gain access with the privileges of Access Type %(type)s
+
+Access can be REVOKED by accessing the following link:
+https://fogcreek-support-access.glitch.me/revoke/%(uid)s

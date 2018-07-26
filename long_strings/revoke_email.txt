@@ -1,0 +1,14 @@
+Hi!
+
+This is a courtesy email to inform you that Fog Creek's access to your site has been revoked.
+
+	Manuscript Site		%(url)s
+	Access Account		%(email)s
+	Access Type		%(type)s
+	Case Number		%(case)d
+	Grant Date		%(grant_date)s
+	Revoke Date		%(revoke_date)s
+
+All the best,
+
+Fog Creek Customer Support

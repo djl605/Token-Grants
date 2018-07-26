@@ -1,0 +1,8 @@
+Customer token access has been given to %(name)s
+
+    Manuscript Site    %(url)s
+    Access Account    %(customer_email)s
+    Access Type        %(type)s
+    Case Number        %(case)d
+    Grant Date        %(grant_date)s
+    Revoke Date        None

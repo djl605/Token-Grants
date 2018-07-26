@@ -1,0 +1,48 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+    <div id="header">
+      <img src="https://cdn.glitch.com/38495be4-ab24-4a53-864e-02ed6699e35c%2Fimage.png?1510091510968">
+      <h1>
+        Access Authorization
+      </h1>
+    </div>
+
+    <div class="error-text">{{error_text}}</div>
+    
+    
+    <div class="container">
+      <div id="activity-form">
+        <form action="/login" method="post">
+        <div class="input-combo">
+          <label class="form-label" for="name" name="name">Support Person</label>
+          <input class="input-field" type="text" name="name" id="name" value="{{supportperson}}" required readonly>
+        </div>
+        <div class="input-combo">
+          <label class="form-label" for="apiToken" name="apiToken" >Ourdot API Token</label>
+          <p>
+            Learn how to generate a Manuscript API token <a href="http://help.fogcreek.com/12252/manuscript-xml-api-token">here</a>.
+          </p>
+          <input class="input-field" type="password" name="token" id="token" required>
+        </div>
+        <input type="hidden" name="uid" value="{{uid}}">
+        <input type="hidden" name="ixBug" value="{{casenumber}}">
+        <button type="submit" class="btn main">Submit</button>
+
+      </form>
+      </div>
+
+    
+      <div id="messages">
+          <div class="event-body"><img src="https://cdn.glitch.com/b6a2fe4b-e1a7-452f-afc3-d2f9ac9417f3%2Fmanuscript-logo-mark.svg?1507919278027" class="manuscript-logo">
+            <div class="event-comment welcome">
+              <p>
+                Access is only granted to the support person assigned to the case.
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+
+

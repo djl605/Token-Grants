@@ -1,0 +1,81 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+    <div id="header">
+      <img src="https://cdn.glitch.com/38495be4-ab24-4a53-864e-02ed6699e35c%2Fimage.png?1510091510968">
+      <h1>
+        Access Authorization
+      </h1>
+    </div>
+
+    <div class="error-text">{{error_text}}</div>
+    
+    
+    <div class="container">
+      <div id="activity-form">
+        <form action="/" method="post">
+        <div class="input-combo">
+          <label class="form-label" for="account" name="account">Manuscript Account URL</label>
+          <p>
+            Example:  https://mistyriver.manuscript.com
+          </p>
+          <input class="input-field" type="text" name="account" id="account" value="{{site}}" required>
+        </div>
+        <div class="input-combo">
+          <label class="form-label" for="email" name="email">Email Address</label>
+          <p>
+            Your email address
+          </p>
+          <input class="input-field" type="text" name="email" id="email" value="{{email}}" required>
+        </div>
+        <div class="input-combo">
+          <label class="form-label" for="apiToken" name="apiToken" >Manuscript API Token</label>
+          <p>
+            Learn how to generate a Manuscript API token <a href="http://help.fogcreek.com/12252/manuscript-xml-api-token">here</a>.
+          </p>
+          <input class="input-field" type="password" name="token" id="token" value="{{token}}" required>
+        </div>
+        <div class="input-combo">
+          
+        <label class="form-label" for="ixBug">Case Number</label>
+          <p>
+            The Fog Creek case number (beginning with FC) associated with this request for access
+          </p>
+          <input class="input-field" type="text" name="ixBug" id="ixBug" value="{{case_number}}" required readonly>
+        </div>
+        <input type="hidden" name="type" value="{{type}}">
+          
+        <button type="submit" class="btn main">Submit</button>
+
+      </form>
+      </div>
+
+    
+      <div id="messages">
+          <div class="event-body"><img src="https://cdn.glitch.com/b6a2fe4b-e1a7-452f-afc3-d2f9ac9417f3%2Fmanuscript-logo-mark.svg?1507919278027" class="manuscript-logo">
+            <div class="event-comment welcome">
+              <p>
+                Because your account on our servers can contain highly sensitive information, we keep the information tightly controlled. Only a very limited number of people have access to view or change your data and we will only do so on a case-by-case basis, and only with your explicit permission.
+              </p>
+            </div>
+          </div>          
+          <div class="event-body"><img src="https://cdn.glitch.com/b6a2fe4b-e1a7-452f-afc3-d2f9ac9417f3%2Fmanuscript-logo-mark.svg?1507919278027" class="manuscript-logo">
+            <div class="event-comment welcome">
+              <p>
+                Authenticating this form grants access to Fog Creek for inspecting your data and to make the necessary changes for the purpose of troubleshooting the referenced case.
+              </p>
+            </div>
+          </div>
+          <div class="event-body"><img src="https://cdn.glitch.com/b6a2fe4b-e1a7-452f-afc3-d2f9ac9417f3%2Fmanuscript-logo-mark.svg?1507919278027" class="manuscript-logo">
+            <div class="event-comment welcome">
+              <p>
+                You'll receive an email after granting access that includes these details, as well as a link that will immediately revoke our access to your account.
+              </p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    
+
+
